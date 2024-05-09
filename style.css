@@ -1,0 +1,50 @@
+.one {
+  color: red;
+}
+.one + .one {
+  color: black;
+}
+.parent {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+.box {
+  height: 40px;
+  width: 40px;
+  background-color: purple;
+}
+.box + .box + .box + .box {
+  margin-left: 20px;
+}
+.circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+.circle:nth-child(2) {
+  background-color: red;
+}
+.circle::after {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 4px;
+  border-radius: 50%;
+  left: 4px;
+  z-index: -1;
+  background-color: aqua;
+  content: "";
+}
+.circle {
+  height: 60px;
+  width: 60px;
+  z-index: 999px;
+  position: relative;
+  border-radius: 50%;
+  background-color: blue;
+}
